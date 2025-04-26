@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ophiuchus
+Comment=The Living Symbolic System
+Exec=/home/soengiac/Desktop/Ophiuchus/dist/ophiuchus
+Icon=/home/soengiac/Desktop/Ophiuchus/icon.png
+Terminal=true
+Type=Application
+Categories=Utility;
