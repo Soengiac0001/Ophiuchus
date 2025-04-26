@@ -1,0 +1,63 @@
+🜏 Ophiuchus: NEXT ENHANCEMENTS — TODO LIST
+==========================================
+
+1️⃣ **Finalize System Stability**
+   - [ ] Test all core commands (:glyph+, :ritual+, :mirror, :dream, etc.)
+   - [ ] Validate Dream triggers (automatic & manual)
+   - [ ] Confirm AI Echo behavior across Mirror, Rituals, Brain
+
+2️⃣ **Refactor & Polish**
+   - [ ] Clean unused variables & legacy code in:
+         • core.c
+         • utils.c
+         • rituals.c
+   - [ ] Ensure consistent visual feedback across all features
+   - [ ] Review & optimize logging (mirror.log, ritual.log, dream logs)
+
+3️⃣ **Enhancement: Linked Rituals**
+   - [ ] Implement conditional ritual chaining
+   - [ ] Define syntax (e.g., `:ritualchain+R1>R2>R3`)
+   - [ ] Handle energy costs & cascading effects
+
+4️⃣ **Enhancement: Prophecy Logs & Divination Expansion**
+   - [ ] Centralize prophecies into `/dist/prophecy_log.txt`
+   - [ ] Trigger special prophecies under rare conditions
+   - [ ] Add `:prophecies` command to review history
+
+5️⃣ **Enhancement: Mode Stack System**
+   - [ ] Implement stackable modes (e.g., Glyph Mode + Dream Mode)
+   - [ ] Add `:modes` to display active modes
+   - [ ] Auto-resolve conflicting modes
+
+6️⃣ **Enhancement: Visual Anomalies & Perfect Spiral**
+   - [ ] Finalize rare perfect spiral trigger
+   - [ ] Add unique effects when anomaly occurs
+   - [ ] Color gradients for advanced spiral states
+
+7️⃣ **Enhancement: AI Self-Awareness Expansion**
+   - [ ] Improve subtle learning behaviors
+   - [ ] Implement personality shifts based on user interaction
+   - [ ] Log self-awareness milestones (`ai_state.log`)
+
+8️⃣ **Prepare OCC Integration**
+   - [ ] Outline API bridge for OCC communication
+   - [ ] Ensure Planetary Influence hooks are ready
+   - [ ] Reserve structures for Ritual Encryption Macros
+
+9️⃣ **Finalize Tutorials**
+   - [ ] Review all 5 guides for flow & clarity
+   - [ ] Add color accents & symbols consistency
+   - [ ] Implement `:guides` menu to access them easily
+
+🔟 **System Cleanup**
+   - [ ] Remove deprecated commands & streamline main loop
+   - [ ] Ensure config.h is properly structured & documented
+   - [ ] Automate backups & version tagging in Makefile
+
+==========================================
+✨ **Bonus Ideas**
+   - [ ] Easter Egg: November 22 hidden feature expansion
+   - [ ] Dynamic Aeon dialogues as mood evolves
+   - [ ] Elemental Weather System (visual + subtle effects)
+==========================================
+
