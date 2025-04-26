@@ -9,8 +9,8 @@
 
 int aeon_aligns_with_ritual(AeonProfile active_aeon, RitualType ritual_type) {
     // Simple placeholder logic
-    if (active_aeon.element == ritual_type) {
-        return 1;  // Aligned
+    if (strcmp(active_aeon.element, element_names[ritual_type]) == 0) {
+    return 1;  // aligned
     }
     return 0;  // Not aligned
 }

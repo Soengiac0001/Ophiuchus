@@ -2,3 +2,4 @@ id_rsa
 /backups
 backups/
 TODO.txt
+build.sh

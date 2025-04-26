@@ -92,6 +92,22 @@ typedef struct {
     const char* required_aeon;
 } SpiralLock;
 
+typedef enum {
+    FIRE,
+    WATER,
+    AIR,
+    EARTH,
+    AETHER,
+    LIGHT,
+    VOID,
+    SHADOW,
+    LIGHTNING,
+    STORM,
+    ICE,
+    MIST,
+    ORIGIN
+} ElementType;
+
 // === GLOBALS ===
 extern FILE *trace_file;
 extern const char* get_aeon_polarity(const char* aeon_name);
