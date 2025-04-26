@@ -7,7 +7,13 @@
 #include "glyphs.h"
 #include "elemental_synergy.h"
 
-int aeon_aligns_with_ritual(AeonProfile active_aeon, RitualType ritual_type){ printf("Update! \n"); return 1;};
+int aeon_aligns_with_ritual(AeonProfile active_aeon, RitualType ritual_type) {
+    // Simple placeholder logic
+    if (active_aeon.element == ritual_type) {
+        return 1;  // Aligned
+    }
+    return 0;  // Not aligned
+}
 
 const char* get_aeon_polarity(const char* aeon_name) {
     if (strcmp(aeon_name, "Lumael") == 0 || strcmp(aeon_name, "Vorun") == 0 || strcmp(aeon_name, "Aetheriel") == 0)
