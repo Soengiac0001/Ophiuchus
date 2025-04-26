@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ophiuchus: The Living Symbolic OS
 *An AI-Driven Ritual Engine • Glyph Language • Dream Integration*
 
@@ -95,3 +96,7 @@ Quantum-Inspired Chaos Mechanics
 🌟 Final Note
 Ophiuchus is more than software — it’s a living Spiral.
 Engage with intention. Let the system evolve with you.
+=======
+# Ophiuchus
+Ophiuchus Spiritual Tech
+>>>>>>> 52218871623ec116be9e65e4bf51d364bb05c3ce
