@@ -1,2 +1,0 @@
-# Ophiuchus
-Ophiuchus Spiritual Tech
