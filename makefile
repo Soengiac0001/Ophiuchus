@@ -71,10 +71,10 @@ git-update:
 		echo "🔁 Running git-update (repo detected)..."; \
 		git add .; \
 		git commit -m $(GIT_COMMIT_MSG) || echo "No changes to commit."; \
-		git push origin main || echo "Git push failed or remote not set."; \
 	else \
 		echo "⚠️  Skipping git-update: not a git repository."; \
 	fi
+
 
 clean:
 	rm -rf build/*
