@@ -4,15 +4,23 @@ SANITIZE = -fsanitize=undefined,address
 SRC = $(wildcard src/*.c)
 OBJ = $(patsubst src/%.c, build/%.o, $(SRC))
 TARGET = ophiuchus
-DIST_DIR = dist
 BACKUP_DIR = backups
+DIST_DIR = dist
+BUILD_DIR = build
+
+VERSION   := $(shell cat VERSION.txt)
+TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
+
+DIST_ZIP    = $(BACKUP_DIR)/Ophiuchus_dist_v$(VERSION)_$(TIMESTAMP).zip
+PROJECT_ZIP = $(BACKUP_DIR)/Ophiuchus_project_v$(VERSION)_$(TIMESTAMP).zip
+
 
 VERSION := $(shell cat VERSION.txt)
 TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
 ZIP_NAME = $(BACKUP_DIR)/Ophiuchus_v$(VERSION)_$(TIMESTAMP).zip
 GIT_COMMIT_MSG = "Auto-update: v$(VERSION) on $(TIMESTAMP)"
 
-.PHONY: all prepare package backup zip clean git-update auto-bump
+.PHONY: all prepare package backup zip zip-dist zip-project clean git-update auto-bump
 
 all: auto-bump prepare $(DIST_DIR)/$(TARGET) package backup zip
 
@@ -45,8 +53,18 @@ package:
 backup:
 	cp -r $(DIST_DIR) $(BACKUP_DIR)/ophiuchus_$(VERSION)_$(TIMESTAMP)
 
-zip:
-	zip -r $(ZIP_NAME) $(DIST_DIR)
+zip: zip-dist zip-project
+
+zip-dist:
+	zip -r $(DIST_ZIP) $(DIST_DIR)
+
+zip-project:
+	zip -r $(PROJECT_ZIP) . \
+	    -x "$(BACKUP_DIR)/*" \
+	       "$(BUILD_DIR)/*" \
+	       "*.o" \
+	       "*.zip" \
+	       "brain_state.dat"
 
 git-update:
 	if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then \
