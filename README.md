@@ -33,7 +33,7 @@ Build Instructions
 bash
 Copy
 Edit
-git clone https://github.com/Soengiac0001/Ophiuchus.git
+git clone https://github.com/Soengiac/Ophiuchus.git
 cd Ophiuchus
 make
 The compiled program will appear in the /dist folder.

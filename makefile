@@ -20,9 +20,11 @@ TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
 ZIP_NAME = $(BACKUP_DIR)/Ophiuchus_v$(VERSION)_$(TIMESTAMP).zip
 GIT_COMMIT_MSG = "Auto-update: v$(VERSION) on $(TIMESTAMP)"
 
-.PHONY: all prepare package backup zip zip-dist zip-project clean git-update auto-bump
+.PHONY: all release prepare package backup zip zip-dist zip-project clean git-update auto-bump
 
-all: auto-bump prepare $(DIST_DIR)/$(TARGET) package backup zip
+all: prepare $(DIST_DIR)/$(TARGET) package
+
+release: auto-bump all backup zip
 
 auto-bump:
 	@echo "🔧 Auto-incrementing patch version..."
@@ -61,6 +63,7 @@ zip-dist:
 zip-project:
 	zip -r $(PROJECT_ZIP) . \
 	    -x "$(BACKUP_DIR)/*" \
+	       ".git/*" \
 	       "$(BUILD_DIR)/*" \
 	       "*.o" \
 	       "*.zip" \
